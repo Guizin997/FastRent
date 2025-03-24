@@ -7,9 +7,21 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+            <div class="grid grid-flow-row grid-cols-2 grid-row-4 gap-8">
+                <div class="row-span-4 bg-white dark:bg-dark-blue overflow-hidden shadow-sm sm:rounded-lg">
+                    <a href="{{ route('cars.index') }}">
+                        <div class="p-6 text-gray-900 dark:text-gray-100">
+                            <h2>Carros</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row-span-4 bg-white dark:bg-dark-blue overflow-hidden shadow-sm sm:rounded-lg">
+                    <a href="">
+                        <div class="p-6 text-gray-900 dark:text-gray-100">
+                            <h2>Marcas</h2>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
