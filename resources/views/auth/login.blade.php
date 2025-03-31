@@ -5,9 +5,6 @@
 
 <form action="" class="justify-self-center flex border-6 rounded-xl border-amber-200 my-40">
 
-    <div class="justify-self-center h-140 w-130 bg-blue-950">
-
-    </div>
 
     <div class="h-140 w-130 bg-blue-950 border border-l-amber-200">
 
