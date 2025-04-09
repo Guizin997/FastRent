@@ -11,19 +11,19 @@
 
     <style>
         body{
-            background: linear-gradient( #00f5ff, #ff00ff, #ffff00);  
+            background: linear-gradient(90deg, black, red);  
         }
     </style>
 
 </head>
 <body>
-    <nav class="h-30 bg-indigo-300">
+    <nav class="h-30">
 
         <div style="font-family: Nunito" class="text-slate-50 flex gap-8 pl-8 py-10">
             <a href="">Carros</a>
+            <a href="">Alugar</a>
+            <a href="">Por Marca</a>
             <a href="">Usuário</a>
-            <a href="">Configurações</a>
-            <a href="">Empresa</a>
             <a href="">Ajuda</a>
         </div>
 
