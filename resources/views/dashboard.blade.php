@@ -11,7 +11,7 @@
 
     <style>
         body{
-            background-color: black;
+            background: linear-gradient( #00f5ff, #ff00ff, #ffff00);  
         }
     </style>
 
