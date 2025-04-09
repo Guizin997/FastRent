@@ -1,29 +1,32 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="grid grid-flow-row grid-cols-2 grid-row-4 gap-8">
-                <div class="row-span-4 bg-white dark:bg-dark-blue overflow-hidden shadow-sm sm:rounded-lg">
-                    <a href="{{ route('cars.index') }}">
-                        <div class="p-6 text-gray-900 dark:text-gray-100">
-                            <h2>Carros</h2>
-                        </div>
-                    </a>
-                </div>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
 
-                <div class="row-span-4 bg-white dark:bg-dark-blue overflow-hidden shadow-sm sm:rounded-lg">
-                    <a href="">
-                        <div class="p-6 text-gray-900 dark:text-gray-100">
-                            <h2>Marcas</h2>
-                        </div>
-                    </a>
-                </div>
-            </div>
+</head>
+<body>
+    <nav class="h-30 bg-indigo-300">
+
+        <div style="font-family: Nunito" class="text-slate-50 flex gap-8 pl-8 py-10">
+            <a href="">Carros</a>
+            <a href="">Usuário</a>
+            <a href="">Configurações</a>
+            <a href="">Empresa</a>
+            <a href="">Ajuda</a>
         </div>
-    </div>
-</x-app-layout>
+
+    </nav>
+</body>
+</html>
