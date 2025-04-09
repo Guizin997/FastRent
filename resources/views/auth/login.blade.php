@@ -19,10 +19,10 @@
         <input type="password" name="password" placeholder="Senha" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="current-password" />
         <x-input-error :messages="$errors->get('password')" class="mt2" />
 
-        <div class="block mt-4">
+        <div class="block mt-4 px-26">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-800 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-off-white">{{ __('Remember me') }}</span>
+                <span style="font-family: Nunito" class="ms-2 text-sm text-gray-50 dark:text-off-white">Lembre-se de mim</span>
             </label>
         </div>
 
