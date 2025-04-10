@@ -122,5 +122,46 @@
   </div>
 
     </nav>
+
+    <!--
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+
+</head>
+<body class="bg-linear-to-br from-rose-950 to-red-500 bg-no-repeat bg-cover bg-fixed">
+    <nav class="h-30 bg-stone-900  bg-linear-to-br from-rose-950 to-red-500">
+         
+        <div style="font-family: Nunito" class="text-slate-50 flex gap-8 pl-8">
+            <a class="my-12" href="">Carros</a>
+            <a class="my-12" href="">Alugar</a>
+            <a class="my-12" href="">Por Marca</a>
+            <a class="my-12" href="">Usuário</a>
+            <a class="my-12" href="">Ajuda</a>
+            <div class="h-15 w-15 border border-slate-50 rounded-full ml-96 my-7"></div>
+        </div>
+
+    </nav>
+
+    <div class="justify-self-center bg-orange-300 my-40 text-slate-50">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+    </div>
+</body>
+</html>
+    -->
 </body>
 </html>
