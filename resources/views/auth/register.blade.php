@@ -3,6 +3,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+<body class="bg-linear-to-br from-rose-950 to-red-500 bg-no-repeat bg-cover bg-fixed">
+
 <form method="POST" action="{{ route('register') }}" class="justify-self-center flex my-20">
     @csrf
 
@@ -26,3 +28,5 @@
 
     </div>
 </form>
+
+</body>
