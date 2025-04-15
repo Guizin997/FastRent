@@ -23,7 +23,7 @@
         <input type="password" id="passwored" name="password" placeholder="Senha" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
         <x-input-error :messages="$errors->get('password')" class="mt-2" />
 
-        <input type="password" id="password_confirm" name="password_confirm" placeholder="Digite a senha novamente" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
+        <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Digite a senha novamente" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
 
         <x-primary-button class="ms-4">
