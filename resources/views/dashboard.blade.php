@@ -14,13 +14,17 @@
 <body class="bg-linear-to-br from-rose-950 to-red-500 bg-no-repeat bg-cover bg-fixed">
     <nav class="h-30 bg-linear-to-b from-stone-950 to-rose-900/0 bg-cover">
          
+        <div class="flex">
         <div style="font-family: Nunito" class="text-slate-50 flex gap-8 pl-8">
             <a class="my-12" href="">Carros</a>
-            <a class="my-12" href="">Alugar</a>
-            <a class="my-12" href="">Por Marca</a>
-            <a class="my-12" href="">Usuário</a>
+            <a class="my-12" href="">Marcas</a>
+            <a class="my-12" href="">Usuários</a>
             <a class="my-12" href="">Ajuda</a>
-            <div class="h-15 w-15 border border-slate-50 rounded-full ml-102 my-7"></div>
+        </div>
+
+        <div class="justify-items-end w-full py-7">
+          <div class="size-15 border border-slate-50 rounded-full mr-4"></div>
+        </div>
         </div>
 
     </nav>
