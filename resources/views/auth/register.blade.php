@@ -12,15 +12,21 @@
 
         <h2 class="justify-self-center text-4xl font-extrabold text-slate-50 mt-4" style="font-family: Nunito">FastRent</h2>
 
-        <input type="text" placeholder="Nome" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autofocus autocomplete="name">
+        <input type="text" id="name" name="name" placeholder="Nome" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autofocus autocomplete="name">
+        <x-input-error :messages="$errors->get('name')" class="mt-2" />
 
-        <input type="email" placeholder="E-mail" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="username">
+        <input type="email" id="email" name="email" placeholder="E-mail" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="username">
+        <x-input-error :messages="$errors->get('email')" class="mt-2" />
 
-        <input type="password" placeholder="Senha" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
+        <input type="password" id="passwored" name="password" placeholder="Senha" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
+        <x-input-error :messages="$errors->get('password')" class="mt-2" />
 
-        <input type="password" name="password" id="password" placeholder="Digite a senha novamente" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950">
+        <input type="password" id="password_confirm" name="password_confirm" placeholder="Digite a senha novamente" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
+        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
 
-        <button class="justify-self-center justify-center flex bg-linear-to-t/shorter from-rose-950 to-red-500 w-40 h-10 rounded-xl mt-10 pt-2 cursor-pointer text-slate-50 shadow-xl shadow-red-900" style="font-family: Nunito" href="#">Entrar</button>
+        <x-primary-button class="ms-4">
+            {{ __('Cadastrar') }}
+        </x-primary-button>
 
         <a href="{{url('/login')}}" class="justify-self-center flex underline text-cyan-500 text-slate-50 mt-6" style="font-family: Nunito">Já possui uma conta? Entrar</a>
 
