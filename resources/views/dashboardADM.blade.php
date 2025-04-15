@@ -14,30 +14,49 @@
 <body class="bg-linear-to-br from-rose-950 to-red-500 bg-no-repeat bg-cover bg-fixed">
     <nav class="h-30 bg-linear-to-b from-stone-950 to-rose-900/0 bg-cover">
          
+        <div class="flex">
         <div style="font-family: Nunito" class="text-slate-50 flex gap-8 pl-8">
             <a class="my-12" href="">Carros</a>
             <a class="my-12" href="">Marcas</a>
             <a class="my-12" href="">Usuários</a>
             <a class="my-12" href="">Ajuda</a>
-            <div class="h-15 w-15 border border-slate-50 rounded-full ml-102 my-7"></div>
+        </div>
+
+        <div class="justify-items-end w-full py-7">
+          <div class="size-15 border border-slate-50 rounded-full mr-4"></div>
+        </div>
         </div>
 
     </nav>
 
-    <div class="flex gap-4 justify-self-center">
-    <div style="font-family: Nunito" class="card w-80 h-90 shadow-xl shadow-red-200 bg-gray-800 text-slate-50">
+    <!--
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>Try scrolling the rest of the page to see this option in action.</p>
+    </div>
+    </div>
+    -->
+
+    <div class="flex gap-4 justify-self-center mt-16">
+    <div style="font-family: Nunito" class="card w-90 h-50 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200">
         <div class="card-body">
             <h5 class="card-title text-4xl mt-6 ml-6">Adicionar veículo</h6>
             <p class="card-text text-sm text-gray-100 mt-8 ml-6">Adicionar carrocpara ser alugado ou comprado</p>
-            <button style="font-family: Nunito" class="h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-4 cursor-pointer">Adicionar</button>
+            <button style="font-family: Nunito" class="h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-4 cursor-pointer rounded-xl">Adicionar</button>
         </div>
     </div>
 
-    <div style="font-family: Nunito" class="card w-90 h-50 shadow-xl shadow-red-200 bg-gray-800 text-slate-50">
+    <div style="font-family: Nunito" class="card w-90 h-50 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200">
         <div class="card-body">
             <h5 class="card-title text-4xl mt-6 ml-6">Adicionar marca</h6>
             <p class="card-text text-sm text-gray-100 mt-8 ml-6">Adicionar nova marca parceira com nossa empresa</p>
-            <button style="font-family: Nunito" class="h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-4 cursor-pointer">Adicionar</button>
+            <button style="font-family: Nunito" class="h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-4 cursor-pointer rounded-xl">Adicionar</button>
         </div>
     </div>
     </div>
