@@ -24,18 +24,22 @@
 
     </nav>
 
-    <div style="font-family: Nunito" class="card w-20 h-20 cursor-pointer shadow-xl shadow-red-200 bg-gray-800 text-slate-50">
+    <div class="flex gap-4 justify-self-center">
+    <div style="font-family: Nunito" class="card w-80 h-90 shadow-xl shadow-red-200 bg-gray-800 text-slate-50">
         <div class="card-body">
-            <h5 class="card-title">Adicionar veículo</h6>
-            <p class="card-text">Adicionar carro para ser algugado ou comprado</p>
+            <h5 class="card-title text-4xl mt-6 ml-6">Adicionar veículo</h6>
+            <p class="card-text text-sm text-gray-100 mt-8 ml-6">Adicionar carrocpara ser alugado ou comprado</p>
+            <button style="font-family: Nunito" class="h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-4 cursor-pointer">Adicionar</button>
         </div>
     </div>
 
-    <div style="font-family: Nunito" class="card w-20 h-20 cursor-pointer shadow-xl shadow-red-200 bg-gray-800 text-slate-50">
+    <div style="font-family: Nunito" class="card w-90 h-50 shadow-xl shadow-red-200 bg-gray-800 text-slate-50">
         <div class="card-body">
-            <h5 class="card-title">Adicionar marca</h6>
-            <p class="card-text">Adicionar nova marca parceira com nossa empresa</p>
+            <h5 class="card-title text-4xl mt-6 ml-6">Adicionar marca</h6>
+            <p class="card-text text-sm text-gray-100 mt-8 ml-6">Adicionar nova marca parceira com nossa empresa</p>
+            <button style="font-family: Nunito" class="h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-4 cursor-pointer">Adicionar</button>
         </div>
+    </div>
     </div>
 </body>
 </html>
