@@ -57,19 +57,23 @@
     </div>
 
     <div class="flex gap-4 justify-self-center mt-16">
-      <div style="font-family: Nunito" class="card w-90 h-50 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200">
+      <div style="font-family: Nunito" class="card w-90 h-60 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200">
         <div class="card-body">
-          <h5 class="card-title text-4xl mt-6 ml-6">Adicionar veículo</h6>
-            <p class="card-text text-sm text-gray-100 mt-8 ml-6">Adicionar carrocpara ser alugado ou comprado</p>
-            <button style="font-family: Nunito" class="h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-4 cursor-pointer rounded-xl">Adicionar</button>
+          <h5 class="card-title text-4xl mt-6 ml-6">Veículos Cadastrados</h6>
+            <p class="card-text text-sm text-gray-100 mt-6 ml-6">Carros cadastrados para ser alugado ou comprado</p>
+            <a href="{{ route('cars.index') }}" class="btn h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-6 cursor-pointer rounded-xl">
+              Ver Carros
+            </a>
         </div>
       </div>
 
-      <div style="font-family: Nunito" class="card w-90 h-50 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200">
+      <div style="font-family: Nunito" class="card w-90 h-60 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200">
         <div class="card-body">
-          <h5 class="card-title text-4xl mt-6 ml-6">Adicionar marca</h6>
-            <p class="card-text text-sm text-gray-100 mt-8 ml-6">Adicionar nova marca parceira com nossa empresa</p>
-            <button style="font-family: Nunito" class="h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-4 cursor-pointer rounded-xl">Adicionar</button>
+          <h5 class="card-title text-4xl mt-6 ml-6">Lista de Marcas</h6>
+            <p class="card-text text-sm text-gray-100 mt-6 ml-6">Lista de marcas as quais possuimos veículos</p>
+            <a href="{{ route('cars.index') }}" class="btn h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-6 cursor-pointer rounded-xl">
+              Ver Carros
+            </a>
         </div>
       </div>
     </div>
