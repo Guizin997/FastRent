@@ -3,13 +3,28 @@
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
+Route::get('/admin/dashboard', function () {
+    return view('adminDashboard');
+})->middleware(['auth', 'verified'])->name('admin.dashboard');
+
+Route::get('/user/dashboard', function () {
+    return view('userDashboard');
+})->middleware(['auth', 'verified'])->name('user.dashboard');
+
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $user = Auth::user();
+
+    if ($user->is_admin) {
+        return redirect()->route('admin.dashboard');
+    }
+
+    return redirect()->route('user.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
