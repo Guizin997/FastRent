@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
 
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    {{-- <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <title>Document</title>
@@ -54,13 +54,36 @@
             </div>
         </div>
 
-        <div id="bodyOfTable" cla>
+        <div id="bodyOfTable" class="ml-40 mt-20 text-xl">
 
-        <ul>
-            @foreach ($cars as $car)
-                <li>{{ $car->car_model }}</li>
-            @endforeach
-        </ul>
+            <table class=" table bg-gray-900 w-300 text-center rounded-xl text-slate-50  border-">
+
+                <thead >
+                    <tr class="text-amber-300 h-15">
+                      <th scope="col">Modelo</th>
+                      <th scope="col">Quilometragem</th>
+                      <th scope="col">Ano de fabricação</th>
+                      <th scope="col">Marca</th>
+                      <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    @foreach ($cars as $car)
+                    <tr class="border-t h-17">
+                        <td>{{ $car->car_model }}</td>
+                        <td>{{ $car->car_odometer }}</td>
+                        <td>{{ $car->car_fabrication_year }}</td>
+                        <td>{{ $car->car_fabricator }}</td>
+                        <td>
+                            <button class="bg-gray-900 border-2 border-amber-300 rounded-xl p-2">Editar</button>
+                            <button class="bg-gray-900 border-2 border-red-500 ml-4 rounded-xl p-2">Deletar</button>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+
+            </table>
 
         </div>
 </body>
