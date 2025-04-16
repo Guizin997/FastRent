@@ -13,18 +13,18 @@
 </head>
 <body class="bg-linear-to-br from-rose-950 to-red-500 bg-no-repeat bg-cover bg-fixed">
     <nav class="h-30 bg-linear-to-b from-stone-950 to-rose-900/0 bg-cover">
-         
-        <div class="flex">
-        <div style="font-family: Nunito" class="text-slate-50 flex gap-8 pl-8">
-            <a class="my-12" href="">Carros</a>
-            <a class="my-12" href="">Marcas</a>
-            <a class="my-12" href="">Usuários</a>
-            <a class="my-12" href="">Ajuda</a>
-        </div>
 
-        <div class="justify-items-end w-full py-7">
-          <div class="size-15 border border-slate-50 rounded-full mr-4"></div>
-        </div>
+        <div class="flex">
+            <div style="font-family: Nunito" class="text-slate-50 flex gap-8 pl-8">
+                <a class="my-12" href="">Carros</a>
+                <a class="my-12" href="">Marcas</a>
+                <a class="my-12" href="">Usuários</a>
+                <a class="my-12" href="">Ajuda</a>
+            </div>
+
+            <div class="justify-items-end w-full py-7">
+                <div class="size-15 border border-slate-50 rounded-full mr-4"></div>
+            </div>
         </div>
 
     </nav>
@@ -33,13 +33,13 @@
     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
 
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <p>Try scrolling the rest of the page to see this option in action.</p>
-    </div>
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Try scrolling the rest of the page to see this option in action.</p>
+        </div>
     </div>
     -->
 
