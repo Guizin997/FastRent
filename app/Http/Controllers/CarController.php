@@ -9,6 +9,7 @@ class CarController extends Controller
 {
     
     public readonly Car $car;
+    
     public function __construct() {
         $this->car = new Car();
     }
