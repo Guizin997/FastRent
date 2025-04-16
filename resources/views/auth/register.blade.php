@@ -6,7 +6,7 @@
 
 <body class="bg-gray-900">
     
-<form method="POST" action="{{ route('login') }}" class="justify-self-center flex my-33">
+<form method="POST" action="{{ route('register') }}" class="justify-self-center flex my-33">
     @csrf    
 
 
@@ -22,14 +22,14 @@
         <input type="email" id="email" name="email" placeholder="E-mail *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="username">
         <x-input-error :messages="$errors->get('email')" class="mt-2 ml-26 w-80" />
 
-        <input type="password" id="passwored" name="password" placeholder="Senha *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
+        <input type="password" id="password" name="password" placeholder="Senha *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
         <x-input-error :messages="$errors->get('password')" class="mt-2 ml-26 w-80" />
 
         <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Digite a senha novamente *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2 ml-26 w-80" />
 
         <x-primary-button class="ms-3">
-                {{ __('Entrar') }}
+                {{ __('Cadastrar') }}
         </x-primary-button>
         <a href="{{url('/login')}}" class="justify-self-center flex underline text-cyan-500 text-slate-50 mt-4" style="font-family: Nunito">Já possui uma conta?Entrar</a>
     </div>
