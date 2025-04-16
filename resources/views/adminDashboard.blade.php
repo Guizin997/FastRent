@@ -41,8 +41,6 @@
 
     <div class="offcanvas offcanvas-start w-50 h-200 bg-gray-900" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div style="font-family: Nunito" class="w-40">
         <div class="text-slate-50 gap-8">
@@ -56,8 +54,8 @@
       </div>
     </div>
 
-    <div class="flex gap-4 justify-self-center mt-16">
-      <div style="font-family: Nunito" class="card w-90 h-60 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200">
+    <div class="flex gap-4 justify-self-center mt-16 ml-60 ">
+      <div style="font-family: Nunito" class="card w-130 h-60 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200">
         <div class="card-body">
           <h5 class="card-title text-4xl mt-6 ml-6">Veículos Cadastrados</h6>
             <p class="card-text text-sm text-gray-100 mt-6 ml-6">Carros cadastrados para ser alugado ou comprado</p>
@@ -67,7 +65,7 @@
         </div>
       </div>
 
-      <div style="font-family: Nunito" class="card w-90 h-60 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200">
+      <div style="font-family: Nunito" class="card w-130 h-60 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200 ml-30">
         <div class="card-body">
           <h5 class="card-title text-4xl mt-6 ml-6">Lista de Marcas</h6>
             <p class="card-text text-sm text-gray-100 mt-6 ml-6">Lista de marcas as quais possuimos veículos</p>
