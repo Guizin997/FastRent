@@ -31,7 +31,7 @@
 
 
         <x-primary-button class="ms-3">
-                {{ __('Log in') }}
+                {{ __('Entrar') }}
         </x-primary-button>
         <a href="{{url('/register')}}" class="justify-self-center flex underline text-cyan-500 text-slate-50 mt-4" style="font-family: Nunito">Não possui uma conta?Cadastre-se</a>
     </div>
