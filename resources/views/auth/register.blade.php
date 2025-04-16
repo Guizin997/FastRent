@@ -15,16 +15,16 @@
         <h2 class="justify-self-center text-4xl font-extrabold text-slate-50 mt-4" style="font-family: Nunito">FastRent</h2>
 
         <input type="text" id="name" name="name" placeholder="Nome" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autofocus autocomplete="name">
-        <x-input-error :messages="$errors->get('name')" class="mt-2" />
+        <x-input-error :messages="$errors->get('name')" class="mt-2 ml-26 w-80" />
 
         <input type="email" id="email" name="email" placeholder="E-mail" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="username">
-        <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        <x-input-error :messages="$errors->get('email')" class="mt-2 ml-26 w-80" />
 
         <input type="password" id="passwored" name="password" placeholder="Senha" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
-        <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        <x-input-error :messages="$errors->get('password')" class="mt-2 ml-26 w-80" />
 
         <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Digite a senha novamente" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
-        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2 ml-26 w-80" />
 
         <x-primary-button class="ms-4">
             {{ __('Cadastrar') }}
