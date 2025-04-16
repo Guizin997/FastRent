@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <title>Document</title>
 
 </head>
+
 <body class="bg-linear-to-br from-rose-950 to-red-500 bg-no-repeat bg-cover bg-fixed">
     <nav class="h-30 bg-linear-to-b from-stone-950 to-rose-900/0 bg-cover">
 
@@ -23,16 +25,22 @@
             </div>
 
             <div class="justify-items-end w-full py-7">
-                <div class="size-15 border border-slate-50 rounded-full mr-4"></div>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="w-full h-full" title="Sair">
+                        <div name="user_icon" class="size-15 border border-slate-50 rounded-full mr-4 cursor-pointer hover:bg-red-600 transition duration-300"></div>
+                    </button>
+                </form>
             </div>
         </div>
 
     </nav>
 
-<div class="w-200 h-170 bg-gray-400 text-slate-50">
-    <h2 ml-6 mt-4 text-4xl>Sobre nós</h2>
-    <p class="text-sm ml-6 mt-8">Porém ipsum dolor sit amet, consectetur adipiscing elit. Porém vitae justo nec quam fringilla fermentum. Integer euismod, porém vel dapibus posuere, metus nunc porta quam, non blandit sapien enim a nulla. Donec a justo, porém eu tincidunt risus. Porém curabitur id sapien ut nisi gravida lacinia.</p>
-</div>
-    
+    <div class="w-200 h-170 bg-gray-400 text-slate-50">
+        <h2 ml-6 mt-4 text-4xl>Sobre nós</h2>
+        <p class="text-sm ml-6 mt-8">Porém ipsum dolor sit amet, consectetur adipiscing elit. Porém vitae justo nec quam fringilla fermentum. Integer euismod, porém vel dapibus posuere, metus nunc porta quam, non blandit sapien enim a nulla. Donec a justo, porém eu tincidunt risus. Porém curabitur id sapien ut nisi gravida lacinia.</p>
+    </div>
+
 </body>
+
 </html>
