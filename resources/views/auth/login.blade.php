@@ -12,7 +12,7 @@
 
     <div class="h-140 w-130 bg-linear-to-t/shorter from-red-500 to-rose-950 rounded-2xl shadow-xl shadow-red-700/60">
 
-        <div class="ring-3 ring-amber-300 shadow-xl shadow-amber-300/60 rounded-full mx-center mt-10 w-30 h-30 justify-self-center bg-no-repeat bg-cover bg-fixed"><img class="rounded-full" src="{{ asset('assets/images/fastRentLogo.png') }}" alt=""></div>
+        <div class="ring-3 ring-amber-300 shadow-xl shadow-amber-300/60 rounded-full mx-center mt-10 w-30 h-30 justify-self-center bg-no-repeat bg-cover bg-fixed"><img class="rounded-full" src="{{ asset('assets/images/fastRentLogo.png') }}" alt="FastRent Logo"></div>
 
         <h2 class="justify-self-center text-4xl font-extrabold text-slate-50 mt-4" style="font-family: Nunito">FastRent</h2>
 
