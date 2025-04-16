@@ -54,12 +54,17 @@
             </div>
         </div>
 
-        <div id="bodyOfTable" class="ml-40 mt-20 text-xl">
+        
 
-            <table class=" table bg-gray-900 w-300 text-center rounded-xl text-slate-50  border-">
+        <div id="bodyOfTable" class="ml-40 mt-20 text-xl">
+            <div class="flex gap-223">
+                <h1 style="font-family: Nunito" class="text-6xl text-slate-50 mb-10">Carros</h1>
+                <button class="w-30 h-10 border-3 border-green-500 justify-self-end mb-2 rounded-xl text-slate-50 bg-gray-900 cursor-pointer mt-13">Adicionar</button>
+            </div>
+            <table class=" table bg-gray-900 w-300 text-center rounded-xl text-slate-50 shadow-2xl shadow-gray-950">
 
                 <thead >
-                    <tr class="text-amber-300 h-15">
+                    <tr class="text-amber-300 h-17">
                       <th scope="col">Modelo</th>
                       <th scope="col">Quilometragem</th>
                       <th scope="col">Ano de fabricação</th>
@@ -76,8 +81,8 @@
                         <td>{{ $car->car_fabrication_year }}</td>
                         <td>{{ $car->car_fabricator }}</td>
                         <td>
-                            <button class="bg-gray-900 border-2 border-amber-300 rounded-xl p-2">Editar</button>
-                            <button class="bg-gray-900 border-2 border-red-500 ml-4 rounded-xl p-2">Deletar</button>
+                            <button class="bg-gray-900 border-2 border-amber-300 rounded-xl p-2 cursor-pointer">Editar</button>
+                            <button class="bg-gray-900 border-2 border-red-500 ml-4 rounded-xl p-2 cursor-pointer">Deletar</button>
                         </td>
                     </tr>
                     @endforeach
@@ -86,6 +91,7 @@
             </table>
 
         </div>
+
 </body>
 
 </html>
