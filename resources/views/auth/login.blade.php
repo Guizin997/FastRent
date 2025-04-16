@@ -16,10 +16,10 @@
 
         <h2 class="justify-self-center text-4xl font-extrabold text-slate-50 mt-4" style="font-family: Nunito">FastRent</h2>
 
-        <input type="email" name="email" :value="old('email')" placeholder="E-mail" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autofocus autocomplete="username" />
+        <input type="email" name="email" :value="old('email')" placeholder="E-mail *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autofocus autocomplete="username" />
         <x-input-error :messages="$errors->get('email')" class="mt2" />
 
-        <input type="password" name="password" placeholder="Senha" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="current-password" />
+        <input type="password" name="password" placeholder="Senha *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="current-password" />
         <x-input-error :messages="$errors->get('password')" class="mt2" />
 
         <div class="block mt-4 px-26">
