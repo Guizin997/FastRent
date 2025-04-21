@@ -62,9 +62,13 @@
             <div style="background-image: " class="w-full h-27 bg-no-repeat bg-cover bg-fixed">
             </div>       
             <p class="card-text text-xl text-gray-100 mt-6 ml-6">Marca: <span class="text-gray-200"></span></p>
-            <p class="card-text text-xl text-gray-100 mt-6 ml-6">Aluguel: <span class="text-gray-200"></span></p>
-            <a href="{{ route('cars.index') }}" class="btn h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-6 cursor-pointer rounded-xl">
-              Alugar
+            <p class="card-text text-xl text-gray-100 mt-6 ml-6">Data de devolução: <span class="text-gray-200"></span></p>
+            <p class="card-text text-xl text-gray-100 mt-6 ml-6">Juros pós data marcada: <span class="text-gray-200"></span></p>
+            <a href="{{ route('cars.index') }}" class="btn h-8 bg-gray-800 border-amber-300 border-2 text-slate-50 px-4 ml-6 mt-6 cursor-pointer rounded-xl">
+              Editar
+            </a>
+            <a href="{{ route('cars.index') }}" class="btn h-8 bg-gray-800 border-red-500 border-2 text-slate-50 px-4 ml-6 mt-6 cursor-pointer rounded-xl">
+              Deletar
             </a>
         </div>
       </div>
@@ -76,9 +80,13 @@
             <div style="background-image: " class="w-full h-27 bg-no-repeat bg-cover bg-fixed">
             </div>       
             <p class="card-text text-xl text-gray-100 mt-6 ml-6">Marca: <span class="text-gray-200"></span></p>
-            <p class="card-text text-xl text-gray-100 mt-6 ml-6">Aluguel: <span class="text-gray-200"></span></p>
-            <a href="{{ route('cars.index') }}" class="btn h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-6 cursor-pointer rounded-xl">
-              Alugar
+            <p class="card-text text-xl text-gray-100 mt-6 ml-6">Data de devolução: <span class="text-gray-200"></span></p>
+            <p class="card-text text-xl text-gray-100 mt-6 ml-6">Juros pós data marcada: <span class="text-gray-200"></span></p>
+            <a href="{{ route('cars.index') }}" class="btn h-8 bg-gray-800 border-amber-300 border-2 text-slate-50 px-4 ml-6 mt-6 cursor-pointer rounded-xl">
+              Editar
+            </a>
+            <a href="{{ route('cars.index') }}" class="btn h-8 bg-gray-800 border-red-500 border-2 text-slate-50 px-4 ml-6 mt-6 cursor-pointer rounded-xl">
+              Deletar
             </a>
         </div>
       </div>
