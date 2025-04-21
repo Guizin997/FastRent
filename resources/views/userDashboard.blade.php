@@ -55,23 +55,30 @@
     </div>
 
     <div class="my-6 gap-4 justify-self-center mt-16 ml-60 ">
-      <h2>Carros alugado</h2>
-      <div style="font-family: Nunito" class="card w-130 h-60 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200">
+      <h1 style="font-family: Nunito" class="mb-3 text-6xl text-slate-50">Carros Alugados</h1>
+      <div style="font-family: Nunito" class="card w-130 h-90 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200">
         <div class="card-body">
-          <h5 class="card-title text-4xl mt-6 ml-6">Veículos Cadastrados</h6>
-            <p class="card-text text-sm text-gray-100 mt-6 ml-6">Carros cadastrados para ser alugado ou comprado</p>
+          <h5 class="card-title text-4xl text-amber 300 mt-6 ml-6">Nome do Veículo</h6>
+            <div style="background-image: " class="w-full h-27 bg-no-repeat bg-cover bg-fixed">
+            </div>       
+            <p class="card-text text-xl text-gray-100 mt-6 ml-6">Marca: <span class="text-gray-200"></span></p>
+            <p class="card-text text-xl text-gray-100 mt-6 ml-6">Aluguel: <span class="text-gray-200"></span></p>
             <a href="{{ route('cars.index') }}" class="btn h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-6 cursor-pointer rounded-xl">
-              Ver Carros
+              Alugar
             </a>
         </div>
       </div>
 
-      <div style="font-family: Nunito" class="card w-130 h-60 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200 ml-30">
+      <div class="my-6 gap-4 justify-self-center mt-16 ml-60 ">
+      <div style="font-family: Nunito" class="card w-130 h-90 shadow-xl shadow-red-500 bg-gray-900 text-slate-50 rounded-xl border-2 border-red-200">
         <div class="card-body">
-          <h5 class="card-title text-4xl mt-6 ml-6">Lista de Marcas</h6>
-            <p class="card-text text-sm text-gray-100 mt-6 ml-6">Lista de marcas as quais possuimos veículos</p>
+          <h5 class="card-title text-4xl text-amber 300 mt-6 ml-6">Nome do Veículo</h6>
+            <div style="background-image: " class="w-full h-27 bg-no-repeat bg-cover bg-fixed">
+            </div>       
+            <p class="card-text text-xl text-gray-100 mt-6 ml-6">Marca: <span class="text-gray-200"></span></p>
+            <p class="card-text text-xl text-gray-100 mt-6 ml-6">Aluguel: <span class="text-gray-200"></span></p>
             <a href="{{ route('cars.index') }}" class="btn h-8 bg-gray-800 border-green-400 border-2 text-slate-50 px-4 ml-6 mt-6 cursor-pointer rounded-xl">
-              Ver Carros
+              Alugar
             </a>
         </div>
       </div>
