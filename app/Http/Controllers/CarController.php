@@ -28,7 +28,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        return view('car_create');
     }
 
     /**
@@ -36,7 +36,20 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $created = $this->car->create([
+            'car_model' => $request->input('car_model'),
+            'car_odometer' => $request->input('car_odometer'),
+            'car_fabrication_year' => $request->input('car_fabrication_year'),
+            'car_fabricator' => $request->input('car_fabricator'),
+            'car_category' => $request->input('car_category'),
+            'car_rental_value' => $request->input('car_rental_value'),
+        ]);
+
+        if ($created) {
+            return redirect()->route('cars.index')->with('success', 'Successfuly created');
+        }
+
+        return redirect()->route('cars.index')->with('error', 'Error created');
     }
 
     /**

@@ -64,7 +64,7 @@
             @endif
             <div class="flex gap-223">
                 <h1 style="font-family: Nunito" class="text-6xl text-slate-50 mb-10">Carros</h1>
-                <button class="w-30 h-10 border-3 border-green-500 justify-self-end mb-2 rounded-xl text-slate-50 bg-gray-900 cursor-pointer mt-13">Adicionar</button>
+                <a href="{{ route('cars.create') }}" class="button w-30 h-10 border-3 border-green-500 justify-self-end text-center mb-2 rounded-xl text-slate-50 bg-gray-900 cursor-pointer mt-13">Adicionar</a>
             </div>
             <table class=" table bg-gray-900 w-300 text-center rounded-xl text-slate-50 shadow-2xl shadow-gray-950">
 
