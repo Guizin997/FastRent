@@ -25,7 +25,7 @@
         <input type="number" id="text" name="password" placeholder="Passageiros por carro*" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
         <x-input-error :messages="$errors->get('password')" class="mt-2 ml-26 w-80" />
 
-        <input type="number" id="password_confirmation" name="password_confirmation" placeholder="Descrição da categoria *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
+        <input type="text" id="password_confirmation" name="password_confirmation" placeholder="Descrição da categoria *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="new-password">
         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2 ml-26 w-80" />
 
         <x-primary-button class="ms-3">
