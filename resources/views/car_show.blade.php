@@ -57,55 +57,19 @@
 
 
         <div id="bodyOfTable" class="ml-40 mt-20 text-xl">
-            @if (session()->has('success'))
-            {{session()->get('success')}}
-            @else
-            {{session()->get('error')}}
-            @endif
 
-            @if (session()->has('delete'))
-            {{session()->get('delete')}}
-                <form action="{{ route('cars.destroy', ['car' => $car->id]) }}" method="post">
-                    <h4>Deseja realmente deletar o veiculo "{{$car->car_model}}"?</h4>
-                </form>
-            @endif
-
-            <div class="flex gap-223">
-                <h1 style="font-family: Nunito" class="text-6xl text-slate-50 mb-10">Carros</h1>
-                <a href="{{ route('cars.create') }}" class="button w-30 h-10 border-3 border-green-500 justify-self-end text-center mb-2 rounded-xl text-slate-50 bg-gray-900 cursor-pointer mt-13">Adicionar</a>
-            </div>
-            <table class=" table bg-gray-900 w-300 text-center rounded-xl text-slate-50 shadow-2xl shadow-gray-950">
-
-                <thead>
-                    <tr class="text-amber-300 h-17">
-                        <th scope="col">Modelo</th>
-                        <th scope="col">Quilometragem</th>
-                        <th scope="col">Ano de fabricação</th>
-                        <th scope="col">Marca</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Valor para aluguel</th>
-                        <th scope="col">Ações</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    @foreach ($cars as $car)
-                    <tr class="border-t h-17">
-                        <td>{{ $car->car_model }}</td>
-                        <td>{{ $car->car_odometer }}</td>
-                        <td>{{ $car->car_fabrication_year }}</td>
-                        <td>{{ $car->car_fabricator }}</td>
-                        <td>{{ $car->car_category }}</td>
-                        <td>{{ $car->car_rental_value }}</td>
-                        <td>
-                            <a href="{{ route('cars.edit', ['car' => $car->id]) }}" class="button bg-gray-900 border-2 border-amber-300 rounded-xl p-2 cursor-pointer">Editar</a>
-                            <a href="{{ route('cars.show', ['car' => $car->id]) }}" class="button bg-gray-900 border-2 border-red-500 ml-4 rounded-xl p-2 cursor-pointer">Deletar</a>
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-
-            </table>
+            <form action="{{ route('cars.destroy', ['car' => $car->id]) }}" method="post" class="justify-self-center flex my-33">
+                @csrf
+                <input type="hidden" name="_method" value="DELETE">
+                <div class="h-70 w-130 bg-linear-to-t/shorter from-red-500 to-rose-950 rounded-2xl shadow-xl shadow-red-700/60">
+                    <h2 class="justify-self-center text-4xl font-extrabold text-slate-50 mt-8" style="font-family: Nunito">Deletando Carro</h2>
+                    <h4 class="justify-self-center text-2xl font-extrabold text-slate-50 mx-5 mt-5" style="font-family: Nunito">Deseja realmente excluir o veiculo "{{$car->car_model}}"?</h4>
+                    <div class="flex flex-row justify-end px-5">
+                        <button type="submit" class="button bg-gray-900 border-2 border-red-500 ml-5 mt-4 rounded-xl p-2 cursor-pointer text-slate-50">Exluir</button>
+                        <a href="{{ route('cars.index') }}" class="button bg-gray-900 border-2 border-gray-400 ml-5 mt-4 rounded-xl p-2 cursor-pointer text-slate-50">Cancelar</a>
+                    </div>
+                </div>
+            </form>
 
         </div>
 

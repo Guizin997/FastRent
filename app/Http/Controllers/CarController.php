@@ -55,9 +55,9 @@ class CarController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(car $car)
     {
-        //
+        return view('car_show', ['car' => $car]);
     }
 
     /**
@@ -87,6 +87,8 @@ class CarController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $this->car->where('id', $id)->delete();
+
+        return redirect()->route('cars.index');
     }
 }
