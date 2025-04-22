@@ -63,17 +63,17 @@
 
         <h2 class="justify-self-center text-4xl font-extrabold text-slate-50 mt-4" style="font-family: Nunito">Editar Carro</h2>
 
-        <input value="{{ $car->car_model }}" type="text" name="car_model" placeholder="Modelo do carro *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" autofocus>
+        <input value="{{ $car->car_model }}" type="text" name="car_model" placeholder="Modelo do carro *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autofocus>
 
-        <input value="{{ $car->car_odometer }}" type="number" name="car_odometer" placeholder="Quilometragem *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950">
+        <input value="{{ $car->car_odometer }}" type="number" name="car_odometer" placeholder="Quilometragem *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
 
-        <input value="{{ $car->car_fabrication_year }}" type="number" name="car_fabrication_year" placeholder="Ano de fabricação *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950">
+        <input value="{{ $car->car_fabrication_year }}" type="number" name="car_fabrication_year" placeholder="Ano de fabricação *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
 
-        <input value="{{ $car->car_fabricator }}" type="text" name="car_fabricator" placeholder="Marca *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950">
+        <input value="{{ $car->car_fabricator }}" type="text" name="car_fabricator" placeholder="Marca *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
 
-        <input value="{{ $car->car_category }}" type="text" name="car_category" placeholder="Categoria *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950">
+        <input value="{{ $car->car_category }}" type="text" name="car_category" placeholder="Categoria *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
 
-        <input value="{{ $car->car_rental_value }}" type="text" name="car_rental_value" placeholder="Valor para aluguel *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950">
+        <input value="{{ $car->car_rental_value }}" type="text" name="car_rental_value" placeholder="Valor para aluguel *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
 
         <x-primary-button class="ms-3">
           {{ __('Salvar') }}
