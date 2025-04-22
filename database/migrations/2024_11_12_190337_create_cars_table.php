@@ -17,6 +17,8 @@ return new class extends Migration
             $table->float('car_odometer'); //hodômetro: o medidor de kilometragem presente no painel dos carros
             $table->year('car_fabrication_year');
             $table->string('car_fabricator');
+            $table->string('car_category');
+            $table->float('car_rental_value'); //traduzindo: valor do aluguel do carro
             $table->timestamps();
         });
     }
