@@ -48,6 +48,7 @@
             <li class="cursor-pointer hover:bg-linear-to-r from-red-500 to-gray-900">Carros</li>
             <li class="mt-6 cursor-pointer hover:bg-linear-to-r from-gray-900 to-red-500">Marcas</li>
             <li class="mt-6 cursor-pointer hover:bg-linear-to-r from-gray-900 to-red-500">Usuários</li>
+              <li class="mt-6 cursor-pointer hover:bg-linear-to-r from-gray-900 to-red-500">Multas</li>
             <li class="mt-6 cursor-pointer hover:bg-linear-to-r from-gray-900 to-red-500">Ajuda</li>
           </ul>
         </div>
