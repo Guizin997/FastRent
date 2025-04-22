@@ -62,9 +62,12 @@
 
         <div class="ring-3 ring-amber-300 shadow-xl shadow-amber-300/60 rounded-full mx-center mt-10 w-30 h-30 justify-self-center bg-no-repeat bg-cover bg-fixed"><img class="rounded-full" src="{{ asset('assets/images/fastRentLogo.png') }}" alt="FastRent Logo"></div>
 
-        <h2 class="justify-self-center text-4xl font-extrabold text-slate-50 mt-4" style="font-family: Nunito">Editar Marca</h2>
+        <h2 class="justify-self-center text-4xl font-extrabold text-slate-50 mt-4" style="font-family: Nunito">Adicionar Marca</h2>
 
         <input type="text" id="name" name="name" placeholder="Nome da marca *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autofocus autocomplete="name">
+        <x-input-error :messages="$errors->get('name')" class="mt-2 ml-26 w-80" />
+
+        <input type="text" id="name" name="name" placeholder="País de origem *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autofocus autocomplete="name">
         <x-input-error :messages="$errors->get('name')" class="mt-2 ml-26 w-80" />
 
         <input type="number" id="email" name="email" placeholder="Carros em estoque *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autocomplete="username">
