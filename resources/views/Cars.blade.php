@@ -54,25 +54,32 @@
             </div>
         </div>
 
-        
+
 
         <div id="bodyOfTable" class="ml-40 mt-20 text-xl">
+            @if (session()->has('success'))
+            {{session()->get('success')}}
+            @else
+            {{session()->get('error')}}
+            @endif
             <div class="flex gap-223">
                 <h1 style="font-family: Nunito" class="text-6xl text-slate-50 mb-10">Carros</h1>
                 <button class="w-30 h-10 border-3 border-green-500 justify-self-end mb-2 rounded-xl text-slate-50 bg-gray-900 cursor-pointer mt-13">Adicionar</button>
             </div>
             <table class=" table bg-gray-900 w-300 text-center rounded-xl text-slate-50 shadow-2xl shadow-gray-950">
 
-                <thead >
+                <thead>
                     <tr class="text-amber-300 h-17">
-                      <th scope="col">Modelo</th>
-                      <th scope="col">Quilometragem</th>
-                      <th scope="col">Ano de fabricação</th>
-                      <th scope="col">Marca</th>
-                      <th scope="col">Ações</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Quilometragem</th>
+                        <th scope="col">Ano de fabricação</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Valor para aluguel</th>
+                        <th scope="col">Ações</th>
                     </tr>
                 </thead>
-                
+
                 <tbody>
                     @foreach ($cars as $car)
                     <tr class="border-t h-17">
@@ -80,8 +87,10 @@
                         <td>{{ $car->car_odometer }}</td>
                         <td>{{ $car->car_fabrication_year }}</td>
                         <td>{{ $car->car_fabricator }}</td>
+                        <td>{{ $car->car_category }}</td>
+                        <td>{{ $car->car_rental_value }}</td>
                         <td>
-                            <button class="bg-gray-900 border-2 border-amber-300 rounded-xl p-2 cursor-pointer">Editar</button>
+                            <a href="{{ route('cars.edit', ['car' => $car->id]) }}" class="button bg-gray-900 border-2 border-amber-300 rounded-xl p-2 cursor-pointer">Editar</a>
                             <button class="bg-gray-900 border-2 border-red-500 ml-4 rounded-xl p-2 cursor-pointer">Deletar</button>
                         </td>
                     </tr>

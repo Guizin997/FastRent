@@ -50,9 +50,9 @@ class CarController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Car $car)
     {
-        //
+        return view('car_edit', ['car'=>$car]);
     }
 
     /**
@@ -60,7 +60,13 @@ class CarController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $updated = $this->car->where('id', $id)->update($request->except(['_token', '_method']));
+
+        if($updated) {
+            return redirect()->route('cars.index')->with('success', 'Successfuly updated');
+        }
+
+        return redirect()->route('cars.index')->with('error', 'Error update');
     }
 
     /**
