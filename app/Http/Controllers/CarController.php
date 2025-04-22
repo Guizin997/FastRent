@@ -57,7 +57,7 @@ class CarController extends Controller
      */
     public function show(car $car)
     {
-        return view('car_show', ['car' => $car]);
+        return view('cars')->with('delete',['car' => $car]);
     }
 
     /**

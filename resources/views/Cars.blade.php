@@ -63,12 +63,17 @@
             {{session()->get('error')}}
             @endif
 
-            @if (session()->has('delete'))
+            <div class="bg-yellow-800 h-30 p-6 text-green-400" role="alert">
+                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <!-- @if (session()->has('delete'))
             {{session()->get('delete')}}
                 <form action="{{ route('cars.destroy', ['car' => $car->id]) }}" method="post">
                     <h4>Deseja realmente deletar o veiculo "{{$car->car_model}}"?</h4>
                 </form>
-            @endif
+            @endif -->
 
             <div class="flex gap-223">
                 <h1 style="font-family: Nunito" class="text-6xl text-slate-50 mb-10">Carros</h1>
@@ -97,9 +102,13 @@
                         <td>{{ $car->car_fabricator }}</td>
                         <td>{{ $car->car_category }}</td>
                         <td>{{ $car->car_rental_value }}</td>
-                        <td>
+                        <td class="flex justify-self-center">
                             <a href="{{ route('cars.edit', ['car' => $car->id]) }}" class="button bg-gray-900 border-2 border-amber-300 rounded-xl p-2 cursor-pointer">Editar</a>
-                            <a href="{{ route('cars.show', ['car' => $car->id]) }}" class="button bg-gray-900 border-2 border-red-500 ml-4 rounded-xl p-2 cursor-pointer">Deletar</a>
+                            <form action="{{ route('cars.destroy', $car->id) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja deletar este veículo?');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="button bg-gray-900 border-2 border-red-500 ml-4 rounded-xl p-2 cursor-pointer">Deletar</button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
