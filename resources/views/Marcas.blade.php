@@ -66,6 +66,7 @@
                 <thead >
                     <tr class="text-amber-300 h-17">
                       <th scope="col">Marca</th>
+                      <th scope="col">País de origem</th>
                       <th scope="col">Carros em estoque</th>
                       <th scope="col">Carros alugados</th>
                       <th scope="col">Ações</th>
@@ -75,6 +76,7 @@
                 <tbody>
                     @foreach ($cars as $car)
                     <tr class="border-t h-17">
+                        <td>{{ $car->car_model }}</td>
                         <td>{{ $car->car_model }}</td>
                         <td>{{ $car->car_odometer }}</td>
                         <td>{{ $car->car_fabrication_year }}</td>
