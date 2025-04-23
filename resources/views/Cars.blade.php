@@ -63,18 +63,6 @@
             {{session()->get('error')}}
             @endif
 
-            <div class="bg-yellow-800 h-30 p-6 text-green-400" role="alert">
-                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-
-            <!-- @if (session()->has('delete'))
-            {{session()->get('delete')}}
-                <form action="{{ route('cars.destroy', ['car' => $car->id]) }}" method="post">
-                    <h4>Deseja realmente deletar o veiculo "{{$car->car_model}}"?</h4>
-                </form>
-            @endif -->
-
             <div class="flex gap-223">
                 <h1 style="font-family: Nunito" class="text-6xl text-slate-50 mb-10">Carros</h1>
                 <a href="{{ route('cars.create') }}" class="button w-30 h-10 border-3 border-green-500 justify-self-end text-center mb-2 rounded-xl text-slate-50 bg-gray-900 cursor-pointer mt-13">Adicionar</a>
