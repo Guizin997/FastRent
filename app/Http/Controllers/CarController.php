@@ -36,20 +36,34 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        $created = $this->car->create([
-            'car_model' => $request->input('car_model'),
-            'car_odometer' => $request->input('car_odometer'),
-            'car_fabrication_year' => $request->input('car_fabrication_year'),
-            'car_fabricator' => $request->input('car_fabricator'),
-            'car_category' => $request->input('car_category'),
-            'car_rental_value' => $request->input('car_rental_value'),
+        $validated = $request->validate([
+            'car_model' => 'required|string',
+            'car_odometer' => 'required|integer',
+            'car_fabrication_year' => 'required|integer|min:1900',
+            'car_fabricator' => 'required',
+            'car_category' => 'required|string',
+            'car_rental_value' => 'required|numeric|min:0',
+        ], [
+            'car_model.required' => 'O modelo do carro é obrigatório.',
+            'car_odometer.required' => 'A quilometragem é obrigatória.',
+            'car_odometer.integer' => 'A quilometragem deve ser um número inteiro.',
+            'car_fabrication_year.required' => 'O ano de fabricação é obrigatório.',
+            'car_fabrication_year.integer' => 'O ano de fabricação deve ser um número.',
+            'car_fabrication_year.min' => 'O ano de fabricação deve ser maior ou igual a 1900.',
+            'car_fabricator.required' => 'A marca do carro é obrigatória.',
+            'car_category.required' => 'A categoria do carro é obrigatória.',
+            'car_rental_value.required' => 'O valor do aluguel é obrigatório.',
+            'car_rental_value.numeric' => 'O valor do aluguel deve ser numérico.',
+            'car_rental_value.min' => 'O valor do aluguel não pode ser negativo.',
         ]);
 
+        $created = $this->car->create($validated);
+
         if ($created) {
-            return redirect()->route('cars.index')->with('success', 'Successfuly created');
+            return redirect()->route('cars.index')->with('success', 'Novo veículo adicionado com sucesso.');
         }
 
-        return redirect()->route('cars.index')->with('error', 'Error created');
+        return redirect()->route('cars.index')->with('error', 'Falha ao tentar adicionar o veículo.');
     }
 
     /**
@@ -73,13 +87,40 @@ class CarController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $updated = $this->car->where('id', $id)->update($request->except(['_token', '_method']));
+        $validated = $request->validate([
+            'car_model' => 'required|string',
+            'car_odometer' => 'required|integer',
+            'car_fabrication_year' => 'required|integer|min:1900',
+            'car_fabricator' => 'required',
+            'car_category' => 'required|string',
+            'car_rental_value' => 'required|numeric|min:0',
+        ], [
+            'car_model.required' => 'O modelo do carro é obrigatório.',
+            'car_odometer.required' => 'A quilometragem é obrigatória.',
+            'car_odometer.integer' => 'A quilometragem deve ser um número inteiro.',
+            'car_fabrication_year.required' => 'O ano de fabricação é obrigatório.',
+            'car_fabrication_year.integer' => 'O ano de fabricação deve ser um número.',
+            'car_fabrication_year.min' => 'O ano de fabricação deve ser maior ou igual a 1900.',
+            'car_fabricator.required' => 'A marca do carro é obrigatória.',
+            'car_category.required' => 'A categoria do carro é obrigatória.',
+            'car_rental_value.required' => 'O valor do aluguel é obrigatório.',
+            'car_rental_value.numeric' => 'O valor do aluguel deve ser numérico.',
+            'car_rental_value.min' => 'O valor do aluguel não pode ser negativo.',
+        ]);
 
-        if($updated) {
-            return redirect()->route('cars.index')->with('success', 'Successfuly updated');
+        $car = $this->car->find($id);
+
+        if (!$car) {
+            return redirect()->route('cars.index')->with('error', 'Veículo não encontrado.');
         }
 
-        return redirect()->route('cars.index')->with('error', 'Error update');
+        $updated = $car->update($validated);
+
+        if ($updated) {
+            return redirect()->route('cars.index')->with('success', 'Veículo atualizado com sucesso.');
+        }
+
+        return redirect()->route('cars.index')->with('error', 'Erro ao tentar atualizar o veículo.');
     }
 
     /**
@@ -87,8 +128,12 @@ class CarController extends Controller
      */
     public function destroy(string $id)
     {
-        $this->car->where('id', $id)->delete();
+        $deleted = $this->car->where('id', $id)->delete();
 
-        return redirect()->route('cars.index');
+        if ($deleted) {
+            return redirect()->route('cars.index')->with('success', 'Veículo deletado com sucesso.');
+        }
+        
+        return redirect()->route('cars.index')->with('error', 'Falha ao tentar deletar o veículo.');
     }
 }

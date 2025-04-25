@@ -58,9 +58,23 @@
 
         <div id="bodyOfTable" class="ml-40 mt-20 text-xl">
             @if (session()->has('success'))
-            {{session()->get('success')}}
-            @else
-            {{session()->get('error')}}
+            <div class="flex flex-row w-150 justify-between justify-self-center text-green-800 border-3 border-green-800 rounded-md bg-green-200 px-5 py-3">
+                <div>
+                    {{session()->get('success')}}
+                </div>
+                <div>
+                    <a href="">X</a>
+                </div>
+            </div>
+            @elseif (session()->has('error'))
+            <div class="flex flex-row w-150 justify-between justify-self-center text-red-800 border-3 border-red-800 rounded-md bg-red-200 px-5 py-3">
+                <div>
+                    {{session()->get('error')}}
+                </div>
+                <div>
+                    <a href="">X</a>
+                </div>
+            </div>
             @endif
 
             <div class="flex gap-223">

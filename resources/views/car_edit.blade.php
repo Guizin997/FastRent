@@ -39,7 +39,7 @@
 
   <div class="flex">
 
-    <div class="offcanvas offcanvas-start w-50 h-200 bg-gray-900" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas offcanvas-start w-50  bg-gray-900" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div class="offcanvas-header">
       </div>
       <div style="font-family: Nunito" class="w-40">
@@ -54,32 +54,50 @@
       </div>
     </div>
 
-    <form method="post" action="{{ route('cars.update', ['car' => $car->id]) }}" class="justify-self-center flex my-33">
-      @csrf
+    <div id="bodyOfTable" class="ml-40 mt-20 text-xl">
 
-      <input type="hidden" name="_method" value="PUT">
-
-      <div class="h-173 w-130 bg-linear-to-t/shorter from-red-500 to-rose-950 rounded-2xl shadow-xl shadow-red-700/60">
-
-        <h2 class="justify-self-center text-4xl font-extrabold text-slate-50 mt-4" style="font-family: Nunito">Editar Carro</h2>
-
-        <input value="{{ $car->car_model }}" type="text" name="car_model" placeholder="Modelo do carro *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autofocus>
-
-        <input value="{{ $car->car_odometer }}" type="number" name="car_odometer" placeholder="Quilometragem *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
-
-        <input value="{{ $car->car_fabrication_year }}" type="number" name="car_fabrication_year" placeholder="Ano de fabricação *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
-
-        <input value="{{ $car->car_fabricator }}" type="text" name="car_fabricator" placeholder="Marca *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
-
-        <input value="{{ $car->car_category }}" type="text" name="car_category" placeholder="Categoria *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
-
-        <input value="{{ $car->car_rental_value }}" type="text" name="car_rental_value" placeholder="Valor para aluguel *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
-
-        <x-primary-button class="ms-3">
-          {{ __('Salvar') }}
-        </x-primary-button>
+      @if ($errors->any())
+      <div class="flex flex-row w-150 justify-self-center justify-between text-red-800 border-3 border-red-800 rounded-md bg-red-200 px-5 py-3">
+        <div>
+          <ul>
+            @foreach ($errors->all() as $erro)
+            <li>{{ $erro }}</li>
+            @endforeach
+          </ul>
+        </div>
+        <div>
+          <a href="">X</a>
+        </div>
       </div>
-    </form>
+      @endif
+
+      <form method="post" action="{{ route('cars.update', ['car' => $car->id]) }}" class="justify-self-center flex ml-150 my-33">
+        @csrf
+
+        <input type="hidden" name="_method" value="PUT">
+
+        <div class="h-168 w-130 bg-linear-to-t/shorter from-red-500 to-rose-950 rounded-2xl shadow-xl shadow-red-700/60">
+
+          <h2 class="justify-self-center text-4xl font-extrabold text-slate-50 mt-4" style="font-family: Nunito">Editar Carro</h2>
+
+          <input value="{{ $car->car_model }}" type="text" name="car_model" placeholder="Modelo do carro *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required autofocus>
+
+          <input value="{{ $car->car_odometer }}" type="number" name="car_odometer" placeholder="Quilometragem *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
+
+          <input value="{{ $car->car_fabrication_year }}" type="number" name="car_fabrication_year" placeholder="Ano de fabricação *" style="font-family: Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
+
+          <input value="{{ $car->car_fabricator }}" type="text" name="car_fabricator" placeholder="Marca *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
+
+          <input value="{{ $car->car_category }}" type="text" name="car_category" placeholder="Categoria *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
+
+          <input value="{{ $car->car_rental_value }}" type="text" name="car_rental_value" placeholder="Valor para aluguel *" style="font-family:Nunito" class="justify-self-center flex rounded-xl w-80 h-12 pl-2 mt-8 text-slate-50 bg-indigo-950" required>
+
+          <x-primary-button class="ms-3">
+            {{ __('Salvar') }}
+          </x-primary-button>
+        </div>
+      </form>
+    </div>
 
   </div>
 </body>

@@ -39,7 +39,7 @@
 
   <div class="flex">
 
-    <div class="offcanvas offcanvas-start w-50 h-200 bg-gray-900" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas offcanvas-start w-50 bg-gray-900" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div class="offcanvas-header">
       </div>
       <div style="font-family: Nunito" class="w-40">
@@ -54,13 +54,27 @@
       </div>
     </div>
 
-    <form method="POST" action="{{ route('cars.store') }}" class="justify-self-center flex my-33">
-      @csrf
+    <div id="bodyOfTable" class="ml-40 mt-20 text-xl">
 
+      @if ($errors->any())
+      <div class="flex flex-row w-150 justify-self-center justify-between text-red-800 border-3 border-red-800 rounded-md bg-red-200 px-5 py-3">
+        <div>
+          <ul>
+            @foreach ($errors->all() as $erro)
+            <li>{{ $erro }}</li>
+            @endforeach
+          </ul>
+        </div>
+        <div>
+          <a href="">X</a>
+        </div>
+      </div>
+      @endif
 
-      <div class="h-173 w-130 bg-linear-to-t/shorter from-red-500 to-rose-950 rounded-2xl shadow-xl shadow-red-700/60">
+      <form method="POST" action="{{ route('cars.store') }}" class="justify-self-center flex ml-150 my-33">
+        @csrf
 
-        <div class="h-173 w-130 bg-linear-to-t/shorter from-red-500 to-rose-950 rounded-2xl shadow-xl shadow-red-700/60">
+        <div class="h-168 w-130 bg-linear-to-t/shorter from-red-500 to-rose-950 rounded-2xl shadow-xl shadow-red-700/60">
 
           <h2 class="justify-self-center text-4xl font-extrabold text-slate-50 mt-4" style="font-family: Nunito">Adicionar Novo Carro</h2>
 
@@ -80,8 +94,8 @@
             {{ __('Adicionar') }}
           </x-primary-button>
         </div>
-    </form>
-
+      </form>
+    </div>
   </div>
 </body>
 
